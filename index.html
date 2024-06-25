@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylecss/style.css">
+    <link rel="stylesheet" href="stylecss/bootstrap.css">
+    <link rel="stylesheet" href="stylecss/fonts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>Food Home 2</title>
+</head>
+<body>
+    <header class="">
+            <div class="container bg-white rounded-2">
+                <div class="row align-items-center ">
+                    <div class="nav-logo  w-auto me-auto">
+                        <a href="#" class="text-decoration-none text-ORG hover-text-orange">FoodHome</a>
+                    </div>
+                    <div class="desk-link-list nav-link w-auto mx-auto d-xl-block d-lg-block d-none">
+                        <ul class="list-unstyled m-0 d-flex ">
+                            <li><a href="#" class="text-decoration-none active">Home</a></li>
+                            <li><a href="#" class="text-decoration-none">About Us</a></li>
+                            <li><a href="#" class="text-decoration-none">Our Menu</a></li>
+                            <li><a href="#" class="text-decoration-none">Catering</a></li>
+                            <li><a href="#" class="text-decoration-none">Gallery</a></li>
+                            <li><a href="#" class="text-decoration-none">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-btns-box w-auto d-flex gap-xl-3 gap-lg-2 gap-0 align-items-center" >
+                        <div class=" nav-cart-box">
+                            <i class="bi bi-cart text-ORG"></i>
+                            <span class="text-ORG">00</span>
+                        </div>
+                        <div class=" nav-book-box">
+                            <svg width="80" height="60" viewBox="0 0 90 60" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect width="100" height="60" rx="10" fill="url(#pattern0_1_86)"/>
+                                <defs>
+                                <pattern id="pattern0_1_86" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_1_86" transform="matrix(0.00520833 0 0 0.0078125 0.162162 0)"/>
+                                </pattern>
+                                <image id="image0_1_86" width="128" height="128" xlink:href="data:image/png;base64,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"/>
+                                </defs>
+                                </svg>
+                        </div>
+                        <div class=" nav-toggle-box d-xl-none d-lg-none d-md-block ">
+                            <input type="checkbox" id="menu-check">
+                            <label for="menu-check"><i class="bi bi-list fs-2"></i>
+                                <label for="menu-check" class="menu-cover"></label>
+                                <div class="mobile-menu">
+                                    <div class="row">
+                                        <div class="col-10 ps-0">
+                                            <div class="mobile-logo p-0 w-auto me-auto">
+                                                <a href="#" class="text-decoration-none display-4">FoodHome</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <label for="menu-check" class="p-1" ><i class="bi bi-x-lg fs-2"></i></label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 nav-link w-auto  ">
+                                            <ul class="list-unstyled m-0 d-flex  flex-column">
+                                                <li><a href="#" class="text-decoration-none text-WH hover-text-orange">Home</a></li>
+                                                <li><a href="#" class="text-decoration-none text-WH hover-text-orange">About Us</a></li>
+                                                <li><a href="#" class="text-decoration-none text-WH hover-text-orange">Our Menu</a></li>
+                                                <li><a href="#" class="text-decoration-none text-WH hover-text-orange">Catering</a></li>
+                                                <li><a href="#" class="text-decoration-none text-WH hover-text-orange">Gallery</a></li>
+                                                <li><a href="#" class="text-decoration-none text-WH hover-text-orange">Contact Us</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 nav-link w-auto  ">
+                                            <ul class="list-unstyled m-0 d-flex  flex-column">
+                                                <li><i class="bi bi-envelope text-WH  me-3"></i><a href="#" class="text-decoration-none text-WH hover-text-orange">infodesign@gmail.com</a></li>
+                                                <li><i class="bi bi-telephone text-WH  me-3"></i><a href="#" class="text-decoration-none text-WH hover-text-orange">+91 000-000-0000</a></li>
+                                                <li><i class="bi bi-geo-alt text-WH  me-3"></i><a href="#" class="text-decoration-none text-WH hover-text-orange">AB125, 159T Street B5</a></li>
+                                            
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+    
+    <main>
+        <section class="hero-section">
+            <div class="container bg-white rounded-2 overflow-hidden">
+                <div class="hero-banner-slider">
+                    <div class="col-12 img-text p-0">
+                        <img src="images/banner-img.jpg" alt="alt" >
+                        <div class="img-text-box">
+                            <h2 class=" text-WH  "><span class="text-ORG">Hence</span> we are always browsing online to <span class="text-ORG">explore</span> both <span class="text-ORG">healthy</span> and tasty dishes.</h2>
+                            <button class="banner-button">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-section">
+            <div class="container bg-white padding-xy container-cover">
+                <div class="row">
+                    <div class="col-5">
+                        <img src="images/item-1.jpg" alt="img" class="html-img">
+                    </div>
+                    <div class="col-7 heading-style">
+                        <h2>Story</h2>
+                        <h4>Abuot Us</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                        <button class="sub-button">Read More</button>
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="special-section">
+            <div class="container bg-white padding-xy container-cover">
+                <div class="row">
+                    
+                    <div class="col-4 heading-style">
+                        <h2>Story</h2>
+                        <h4>Abuot Us</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available,  or non-characteristic words etc.</p>
+                        <button class="sub-button">View All Special</button>
+                    
+                    </div>
+                    <div class="col-8 d-flex ">
+                        <!-- <div class="row"> -->
+                            <div class="col-4 p-1">
+                                <img src="images/item-2.jpg" alt="img " class="html-img">
+                            </div>
+                            <div class="col-4 p-1">
+                                <img src="images/item-3.jpg" alt="img " class="html-img">
+                            </div>
+                            <div class="col-4 p-1">
+                                <img src="images/item-4.jpg" alt="img " class="html-img">
+                            </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="catreing-section">
+            <div class="container bg-white padding-xy container-cover">
+                <div class="row">
+                    
+                    <div class="col-7 heading-style">
+                        <h2>Story</h2>
+                        <h4>Abuot Us</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                        <button class="sub-button ">Read More</button>
+                    
+                    </div>
+                    <div class="col-5 d-flex ">
+                        <div class="row">
+                            
+                            <div class="col-6 p-1">
+                                <img src="images/catering-1.jpg" alt="img " class="html-img">
+                            </div>
+                            <div class="col-6 p-1">
+                                <img src="images/catering-2.jpg" alt="img " class="html-img">
+                            </div>
+                            <div class="col-12 p-1">
+                                <img src="images/banner-img.jpg" alt="img " class="html-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery-section">
+            <div class="container bg-white padding-xy container-cover">
+                <div class="row justify-content-center">
+                    
+                    <div class="col-9 heading-style text-center">
+                        <h2>Story</h2>
+                        <h4>Abuot Us</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available,    
+                            in the middle of text. on the Internet 
+                            
+                            which looks reasonable. The generated Lorem Ipsum is therefore always free from 
+                            repetition, injected humour, or non-characteristic words etc.</p>
+                    
+                    </div>
+                    <div class="col-12 d-flex ">
+                        <div class="row">
+                            <div class="col-4 p-1 img-box">
+                                <img src="images/gallery-1.jpg" alt="img " class="html-img">
+                            </div>
+                            <div class="col-4 p-1 img-box">
+                                <img src="images/gallery-2.jpg" alt="img " class="html-img">
+                            </div>
+                            <div class="col-4 p-1 img-box">
+                                <img src="images/gallery-3.jpg" alt="img " class="html-img">
+                            </div>
+                            <div class="col-4 p-1 img-box">
+                                <img src="images/gallery-4.jpg" alt="img " class="html-img">
+                            </div>
+                            <div class="col-4 p-1 img-box">
+                                <img src="images/gallery-5.jpg" alt="img " class="html-img">
+                            </div>
+                            <div class="col-4 p-1 img-box">
+                                <img src="images/gallery-6.jpg" alt="img " class="html-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonial-section">
+            <div class="container bg-white padding-xy container-cover">
+                <div class="row justify-content-center">
+                    <div class="col-xl-9 col-12 heading-style text-center">
+                        <h2>Happy Customers</h2>
+                        <h4>Testimonials</h4>
+                    </div>
+                    <div class="col-12 d-flex mt-4 ">
+                        <div class="row">
+                            <div class="col-6 ">
+                                <div class=" review-box bg-light-gray">
+                                <div class="review-title d-flex">
+                                    <div class="review-img">
+                                        <img src="images/Profile.png" alt="img">
+                                    </div>
+                                    <div class="review-heading">
+                                    <h5 class="mb-0">Amit Kumar</h5>
+                                    <div class="stars">
+                                        <i class="bi bi-star-fill text-ORG"></i>
+                                        <i class="bi bi-star-fill text-ORG"></i>
+                                        <i class="bi bi-star-fill text-ORG"></i>
+                                        <i class="bi bi-star-fill text-ORG"></i>
+                                        <i class="bi bi-star-fill text-ORG"></i>
+                                    </div>
+                                   </div>
+                                </div>
+                                <p>making this the first true generator on the Internet. 
+                                    It uses a dictionary of over 200 Latin words, combined with a
+                                     handful of model sentence structures, to generate Lorem
+                                      Ipsum which looks reasonable. haracteristic words etc.</p>
+                                    </div>
+                            </div>
+                            <div class="col-6 ">
+                                <div class=" review-box bg-light-gray">
+                                <div class="review-title d-flex">
+                                    <div class="review-img">
+                                        <img src="images/Profile.png" alt="img">
+                                    </div>
+                                    <div class="review-heading">
+                                    <h5 class="mb-0">Amit Kumar</h5>
+                                    <div class="stars">
+                                        <i class="bi bi-star-fill text-ORG"></i>
+                                        <i class="bi bi-star-fill text-ORG"></i>
+                                        <i class="bi bi-star-fill text-ORG"></i>
+                                        <i class="bi bi-star-fill text-ORG"></i>
+                                        <i class="bi bi-star-fill text-ORG"></i>
+                                    </div>
+                                   </div>
+                                </div>
+                                <p>making this the first true generator on the Internet. 
+                                    It uses a dictionary of over 200 Latin words, combined with a
+                                     handful of model sentence structures, to generate Lorem
+                                      Ipsum which looks reasonable. haracteristic words etc.</p>
+                                    </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact-section">
+            <div class="container bg-white padding-xy container-cover">
+                <div class="row justify-content-center">
+                    
+                    <div class="col-12 heading-style text-center">
+                        <h2>Nice Meet</h2>
+                        <h4>Contact Us</h4>
+                    </div>
+                    <div class="col-12 form-col">
+                        <div class="row rounded-2 overflow-hidden">
+                            <div class="col-5 bg-light-gray form-css">
+                                <form class="">
+                                    <input type="text" placeholder="Full Name">
+                                    <input type="email" placeholder="E-mail">
+                                    <input type="number" placeholder="Phone No.">
+                                    <textarea placeholder="Message"></textarea>
+                                    <button type="submit" class="sub-button">Submit</button>
+                                </form>
+                            </div>
+                            <div class="col-7 p-0">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15249885.318783779!2d82.75252935!3d21.0680074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1719334436719!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <footer class="footer-section">
+                <div class="container bg-white padding-xy container-cover">
+                    <div class="row">
+                        <div class="col-5">
+                            <a href="#" class="text-decoration-none text-ORG display-6 fw-bold footer-logo ">FOODHOME</a>
+                            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Sapiente dicta facere nostrum ab quibusdam. Voluptatem excepturi tempora
+                                 incidunt repellat ipsa voluptatum at rerum natus, 
+                                 itaque doloremque necessitatibus aliquid nisi modi.</p>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-3">
+                            <h4 class="text-ORG">Quick Links</h4>
+                            <ul class="list-unstyled m-0 d-flex flex-column footer-links">
+                                <li><a href="#" class="text-decoration-none">Home</a></li>
+                                <li><a href="#" class="text-decoration-none">About Us</a></li>
+                                <li><a href="#" class="text-decoration-none">Our Menu</a></li>
+                                <li><a href="#" class="text-decoration-none">Catering</a></li>
+                                <li><a href="#" class="text-decoration-none">Gallery</a></li>
+                                <li><a href="#" class="text-decoration-none">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-3">
+                            <h4 class="text-ORG">Contact Us</h4>
+                            <ul class="list-unstyled m-0 d-flex flex-column footer-links">
+                                <li><a href="#" class="text-decoration-none"><i class="bi-envelope text-ORG me-2"></i>dommyinfo@gmail.com</a></li>
+                                <li><a href="#" class="text-decoration-none"><i class="bi-telephone text-ORG me-2"></i>+0 000 000 0000</a></li>
+                                <li><a href="#" class="text-decoration-none"><i class="bi bi-geo-alt text-ORG me-2"></i>AB, XXXX, XXXXX-15B1</a></li>
+                            </ul>
+                            <ul class="list-unstyled mt-3 d-flex gap-2 footer-links">
+                                <li><a href="#" class="text-decoration-none text-ORG"><i class="bi bi-instagram"></i></a></li>
+                                <li><a href="#" class="text-decoration-none text-ORG"><i class="bi bi-facebook"></i></a></li>
+                                <li><a href="#" class="text-decoration-none text-ORG"><i class="bi bi-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="container bg-white copy-right-text">
+                    <div class="row">
+                        <div class="col-12">
+                            <small>Design By <a href="https://design-me.netlify.app/" class="text-decoration-none text-ORG">Design-Me</a></small>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+    </main>
+
+
+    <script src="javascript/popper.js"></script>
+    <script src="javascript/bootstrap.js"></script>
+    <script src="javascript/custom.js"></script>
+
+</body>
+</html>
